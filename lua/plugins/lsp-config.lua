@@ -37,6 +37,11 @@ return {
 
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
+				handlers = handlers,
+			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+				handlers = handlers,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
