@@ -16,9 +16,7 @@ return {
 					text = "undotree",
 					align = "center", -- *optionally* specify an alignment (either 'left', 'center', or 'right')
 				},
-				-- Or, specify the event which the sidebar executes when leaving:
 				["neo-tree"] = { event = "BufWipeout" },
-				-- Or, specify all three
 				Outline = { event = "BufWinLeave", text = "symbols-outline", align = "right" },
 			},
 		})
@@ -56,7 +54,7 @@ return {
 		--                 :BufferCloseBuffersLeft
 		--                 :BufferCloseBuffersRight
 		-- Magic buffer-picking mode
-		map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
+		-- map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
 		-- Sort automatically by...
 		map("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
 		map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)

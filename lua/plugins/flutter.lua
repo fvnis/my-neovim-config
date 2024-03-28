@@ -3,7 +3,7 @@ return {
 		"akinsho/flutter-tools.nvim",
 		lazy = false,
 		dependencies = {
-			"nvim-lua/plenary.nvim",
+			"mfussenegger/nvim-dap",
 			"stevearc/dressing.nvim", -- optional for vim.ui.select
 		},
 		config = function()
@@ -11,6 +11,38 @@ return {
 				debugger = {
 					enabled = true,
 					run_via_dap = true,
+					register_configurations = function(paths)
+						local dap = require("dap")
+
+						dap.set_log_level("TRACE")
+
+						local flutterBin = vim.fn.resolve(vim.fn.exepath("flutter.bat"))
+						local flutterSdk = vim.fn.fnamemodify(flutterBin, ":h:h")
+						local dartSdk = flutterSdk .. "\\bin\\cache\\dart-sdk"
+
+						dap.adapters.dart = {
+							type = "executable",
+							command = flutterBin,
+							args = { "-v", "debug-adapter" },
+							options = {
+								detached = false,
+							},
+						}
+
+						dap.configurations.dart = {
+							{
+								type = "dart",
+								request = "launch",
+								name = "Launch Flutter",
+								dartSdkPath = dartSdk,
+								flutterSdkPath = flutterSdk,
+								program = "${workspaceFolder}\\lib\\main.dart",
+								cwd = "${workspaceFolder}",
+								toolArgs = { "-d", "windows" },
+								sendLogsToClient = true,
+							},
+						}
+					end,
 				},
 
 				dev_log = {
