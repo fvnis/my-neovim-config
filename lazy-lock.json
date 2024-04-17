@@ -1,10 +1,10 @@
 {
   "LuaSnip": { "branch": "master", "commit": "a7a4b4682c4b3e2ba82b82a4e6e5f5a0e79dec32" },
-  "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
   "barbar.nvim": { "branch": "master", "commit": "dd852401ee902745b67fc09a83d113b3fe82a96f" },
   "catppuccin": { "branch": "main", "commit": "045e3499d9ec8d84635fb08877ae44fd33f6a38d" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
+  "dashboard-nvim": { "branch": "master", "commit": "681300934baf36f6184ca41f0b26aed22056d4ee" },
   "dressing.nvim": { "branch": "master", "commit": "18e5beb3845f085b6a33c24112b37988f3f93c06" },
   "flutter-tools.nvim": { "branch": "main", "commit": "01d72d9c1bdf2d454a60c5ba450f83e5ea783f6a" },
   "friendly-snippets": { "branch": "main", "commit": "dcd4a586439a1c81357d5b9d26319ae218cc9479" },
@@ -26,7 +26,9 @@
   "nvim-treesitter": { "branch": "master", "commit": "35c1a32b267c969a024ef651c8a25d7ff9018d22" },
   "nvim-web-devicons": { "branch": "master", "commit": "75df79feb02d5e0ec114e447453775d4d291ea03" },
   "plenary.nvim": { "branch": "master", "commit": "f7adfc4b3f4f91aab6caebf42b3682945fbc35be" },
+  "presence.nvim": { "branch": "main", "commit": "87c857a56b7703f976d3a5ef15967d80508df6e6" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "master", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
-  "vim-fugitive": { "branch": "master", "commit": "193ba9b393931bad768c1d2eed688b0bcc240858" }
+  "vim-fugitive": { "branch": "master", "commit": "193ba9b393931bad768c1d2eed688b0bcc240858" },
+  "vim-go": { "branch": "master", "commit": "14eedf6135cf4253b0ed48a0b53d6834a40da1c4" }
 }

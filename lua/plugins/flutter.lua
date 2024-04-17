@@ -9,47 +9,47 @@ return {
 		config = function()
 			require("flutter-tools").setup({
 				debugger = {
-					enabled = true,
-					run_via_dap = true,
-          -- WINDOS CONFIGURATION!!!! REMOVE THE --
+					enabled = false,
+					run_via_dap = false,
+					-- WINDOS CONFIGURATION!!!! REMOVE THE --
 					-- register_configurations = function(paths)
-						-- local dap = require("dap")
+					-- local dap = require("dap")
 
-						-- dap.set_log_level("TRACE")
+					-- dap.set_log_level("TRACE")
 
-						-- local flutterBin = vim.fn.resolve(vim.fn.exepath("flutter.bat"))
-						-- local flutterSdk = vim.fn.fnamemodify(flutterBin, ":h:h")
-						-- local dartSdk = flutterSdk .. "\\bin\\cache\\dart-sdk"
+					-- local flutterBin = vim.fn.resolve(vim.fn.exepath("flutter.bat"))
+					-- local flutterSdk = vim.fn.fnamemodify(flutterBin, ":h:h")
+					-- local dartSdk = flutterSdk .. "\\bin\\cache\\dart-sdk"
 
-						-- dap.adapters.dart = {
-							-- type = "executable",
-							-- command = flutterBin,
-							-- args = { "-v", "debug-adapter" },
-							-- options = {
-								-- detached = false,
-							-- },
-						-- }
+					-- dap.adapters.dart = {
+					-- type = "executable",
+					-- command = flutterBin,
+					-- args = { "-v", "debug-adapter" },
+					-- options = {
+					-- detached = false,
+					-- },
+					-- }
 
-						-- dap.configurations.dart = {
-							-- {
-								-- type = "dart",
-								-- request = "launch",
-								-- name = "Launch Flutter",
-								-- dartSdkPath = dartSdk,
-								-- flutterSdkPath = flutterSdk,
-								-- program = "${workspaceFolder}\\lib\\main.dart",
-								-- cwd = "${workspaceFolder}",
-								-- toolArgs = { "-d", "windows" },
-								-- sendLogsToClient = true,
-							-- },
-						-- }
+					-- dap.configurations.dart = {
+					-- {
+					-- type = "dart",
+					-- request = "launch",
+					-- name = "Launch Flutter",
+					-- dartSdkPath = dartSdk,
+					-- flutterSdkPath = flutterSdk,
+					-- program = "${workspaceFolder}\\lib\\main.dart",
+					-- cwd = "${workspaceFolder}",
+					-- toolArgs = { "-d", "windows" },
+					-- sendLogsToClient = true,
+					-- },
+					-- }
 					-- end,
 				},
 
 				dev_log = {
-					enabled = false,
-					notify_errors = false, -- if there is an error whilst running then notify the user
-					open_cmd = "tabedit", -- command to use to open the log buffer
+					enabled = true,
+					notify_errors = true, -- if there is an error whilst running then notify the user
+					open_cmd = "belowright 8 split", -- command to use to open the log buffer
 				},
 
 				lsp = {
