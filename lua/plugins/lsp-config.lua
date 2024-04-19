@@ -1,5 +1,12 @@
 return {
 	{
+		"williamboman/nvim-lsp-installer",
+		dependencies = { "neovim/nvim-lspconfig" },
+		config = function()
+			require("nvim-lsp-installer").setup({})
+		end,
+	},
+	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
@@ -27,6 +34,11 @@ return {
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+				handlers = handlers,
+			})
+
+			lspconfig.dartls.setup({
 				capabilities = capabilities,
 				handlers = handlers,
 			})
